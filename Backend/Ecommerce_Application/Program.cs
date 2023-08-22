@@ -22,7 +22,7 @@ builder.Services.AddScoped<IOrderItemsLogic, OrderItemsLogic>();
 
 builder.Services.AddCors(c => c.AddPolicy("corspolicy", build =>
 {
-    build.AllowAnyOrigin().AllowAnyMethod().AllowAnyMethod();
+    build.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
 }));
 
 

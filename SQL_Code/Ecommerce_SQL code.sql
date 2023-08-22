@@ -15,7 +15,10 @@ CREATE TABLE Customer_Details
 --insert into Customer_Details(Customer_Email, Customer_Name, Customer_MobileNo, Customer_AddressLine_1, Customer_AddressLine_2, Customer_City)
 --values('dummymail@gmail.com', 'dummy', '8754893764', 'No,290', 'xyz street', 'chennai')
 
---select * from Customer_Details
+select * from Customer_Details
+
+delete from Customer_Details
+where Customer_Email = 'rmanikandan102000@gmail.com'
 
 -------------------------------------------------------------------------------------------------------------
 
@@ -34,7 +37,12 @@ CREATE TABLE Orders
 --insert into Orders(Customer_Email, Order_Date, Delivery_Date, Shipment_City, Shipment_Status)
 --values('dummymail@gmail.com', '04/08/2023', '07/08/2023', 'Chennai', 1)
 
---select * from Orders
+select * from products
+select * from Orders
+select * from Order_Items
+
+delete from Orders
+where Order_ID = 7;
 
 -------------------------------------------------------------------------------------------------------------
 
@@ -49,7 +57,7 @@ CREATE TABLE Products
 --insert into Products(Product_Name, Price)
 --values('laptop', '50000')
 
---select * from Products
+select * from Products
 
 -------------------------------------------------------------------------------------------------------------
 
@@ -69,7 +77,10 @@ CREATE TABLE Order_Items
 --insert into Order_Items(Order_ID, Product_ID, Quantity, UnitPrice, TotalPrice)
 --values(1, 1, 1, '50000', '50000')
 
---select * from Order_Items
+select * from Order_Items
+
+delete from Order_Items
+where OrderItem_ID = 5
 
 
 

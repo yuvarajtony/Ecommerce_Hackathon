@@ -1,0 +1,13 @@
+
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Quantity</mat-label>
+        <input name="quantity" matInput ngModel required [(ngModel)]="quantity">
+    </mat-form-field>
+
+    <br>
+    <div class="btns">
+        <button class="btn" type="submit" (click)="Confirm()">Confirm</button>
+        <button mat-button mat-dialog-close class="btn">No</button>
+    </div>
+</form>

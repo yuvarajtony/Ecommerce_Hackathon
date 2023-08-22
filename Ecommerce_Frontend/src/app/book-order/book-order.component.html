@@ -1,0 +1,25 @@
+<mat-toolbar class="nav-bar">
+    <span>Flipazon</span>
+    <div class="space"></div>
+
+    <button mat-button class="add-customer" (click)="back()">Back</button>
+</mat-toolbar>
+
+<div class="card-row">
+
+    <mat-card class="card" *ngFor="let product of products">
+        <mat-card-content>
+            <img src="../../assets/order.png" alt="order_icon" class="order-icon">
+            <mat-card-title class="content">Product Name: {{product.productName}}</mat-card-title>
+            <mat-card-title class="content">Product Price: {{product.price}}</mat-card-title>
+        </mat-card-content>
+        <br>
+
+        <mat-card-content>
+            <button mat-button class="btn" (click)="bookOrder(product.productId)">Book</button>
+        </mat-card-content>
+        
+    </mat-card>
+</div>
+    
+    
