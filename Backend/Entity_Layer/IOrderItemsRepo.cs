@@ -13,6 +13,6 @@ namespace Entity_Layer
 
         public List<OrderItem> GetOrderItems();
 
-        public OrderItem GetOrderItembuID(int id);
+        public OrderItem GetOrderItembyID(int id);
     }
 }

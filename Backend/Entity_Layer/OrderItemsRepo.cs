@@ -17,7 +17,7 @@ namespace Entity_Layer
             return item;
         }
 
-        public OrderItem GetOrderItembuID(int id)
+        public OrderItem GetOrderItembyID(int id)
         {
             return _context.OrderItems.FirstOrDefault(x => x.OrderItemId == id);   
         }
