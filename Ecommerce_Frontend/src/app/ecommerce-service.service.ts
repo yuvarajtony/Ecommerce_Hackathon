@@ -181,6 +181,10 @@ export class EcommerceServiceService {
     return this.httpclient.get<orderitem>(`https://localhost:7243/api/OrderItem/GetOrderItembyID/${id}`);
   }
 
+  getorderitembyOrderID(id: number): Observable<orderitem> {
+    return this.httpclient.get<orderitem>(`https://localhost:7243/api/OrderItem/GetOrderItembyOrderID/${id}`);
+  }
+
   addorderitem(orditm: any)
   {
     this.orderitem.orderItemId = orditm.orderItemId;

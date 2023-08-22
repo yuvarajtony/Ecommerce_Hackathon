@@ -95,9 +95,7 @@ export class BookOrderDialogboxComponent implements OnInit {
       })
     })
 
-
-
-    console.log("Quantity: " + this.quantity);
+    // console.log("Quantity: " + this.quantity);
 
     this.snackbar.open('Order Placed', 'Sucessfully', {
       duration: 3000

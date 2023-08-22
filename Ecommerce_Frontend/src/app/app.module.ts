@@ -20,6 +20,7 @@ import { BookOrderComponent } from './book-order/book-order.component';
 import { ViewOrderComponent } from './view-order/view-order.component';
 import { BookOrderDialogboxComponent } from './book-order-dialogbox/book-order-dialogbox.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ViewOrderDetailsDialogComponent } from './view-order-details-dialog/view-order-details-dialog.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     EditCustomerComponent,
     BookOrderComponent,
     ViewOrderComponent,
-    BookOrderDialogboxComponent
+    BookOrderDialogboxComponent,
+    ViewOrderDetailsDialogComponent
   ],
   imports: [
     BrowserModule,

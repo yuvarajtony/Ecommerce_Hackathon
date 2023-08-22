@@ -14,5 +14,7 @@ namespace Entity_Layer
         public List<OrderItem> GetOrderItems();
 
         public OrderItem GetOrderItembyID(int id);
+
+        public OrderItem GetOrderItembyOrderID(int id);
     }
 }

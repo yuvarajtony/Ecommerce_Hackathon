@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { EcommerceServiceService} from '../ecommerce-service.service';
+import { EcommerceServiceService, order, orderitem, product} from '../ecommerce-service.service';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { ViewOrderDetailsDialogComponent } from '../view-order-details-dialog/view-order-details-dialog.component';
 
 
 @Component({
@@ -12,12 +15,32 @@ export class ViewOrderComponent implements OnInit{
   
   received_data: any;
 
+  orders!: order[];
+
   constructor (public router: Router,
-    private ecomservice: EcommerceServiceService) {
+    private ecomservice: EcommerceServiceService,
+    private vieworddialog: MatDialog) {
       this.received_data = ecomservice.getData();
   }
 
   ngOnInit(): void {
-    console.log(this.received_data);
+    this.ecomservice.getorderbyCustomer(this.received_data).subscribe(data => {
+      // console.log(data);
+
+      this.orders = data;
+      
+    })
+    // console.log(this.received_data);
+  }
+
+  viewOrderdDetail(id: number){
+    const dRef = this.vieworddialog.open(ViewOrderDetailsDialogComponent, {
+      data: id
+    });
+  }
+
+  back()
+  {
+    this.router.navigate(['home']);
   }
 }

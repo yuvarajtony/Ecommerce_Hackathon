@@ -26,5 +26,10 @@ namespace Entity_Layer
         {
             return _context.OrderItems.ToList();
         }
+
+        public OrderItem GetOrderItembyOrderID(int id)
+        {
+            return _context.OrderItems.FirstOrDefault(x => x.OrderId == id);
+        }
     }
 }

@@ -52,7 +52,7 @@ namespace Ecommerce_Application.Controllers
             {
                 var data = _logic.GetOrderItembyID(id);
 
-                if(data != null)
+                if (data != null)
                 {
                     return Ok(data);
                 }
@@ -66,5 +66,30 @@ namespace Ecommerce_Application.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+
+        [HttpGet("GetOrderItembyOrderID/{id}")]
+
+        public IActionResult GetOrderitembyOrdID([FromRoute] int id)
+        {
+            try
+            {
+                var data = _logic.GetOrderItembyOrderID(id);
+
+                if (data != null)
+                {
+                    return Ok(data);
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

@@ -1,0 +1,11 @@
+<div class="details">
+    <p>Product Name: {{product.productName}}</p>
+    <p>Quantity: {{orderItem.quantity}}</p>
+    <p>Unit Price: {{orderItem.unitPrice}}</p>
+    <p>Total Price: {{orderItem.totalPrice}}</p>
+
+    <div class="buttons">
+        <button class="btn" type="submit" (click)="deleteOrder(orderItem.orderId)">Cancel Order</button>
+        <button mat-button mat-dialog-close class="btn">No</button>
+    </div>
+</div>

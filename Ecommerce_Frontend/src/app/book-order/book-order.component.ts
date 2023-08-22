@@ -31,7 +31,7 @@ export class BookOrderComponent implements OnInit{
   {
     this.ecomservice.getproducts().subscribe(data => {
       this.products = data;
-
+      
       // console.log(data);
     })
   }

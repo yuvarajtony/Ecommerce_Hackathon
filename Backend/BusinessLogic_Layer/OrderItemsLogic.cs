@@ -32,5 +32,10 @@ namespace BusinessLogic_Layer
         {
             return Mapper.EMOrdItmMapper(_repo.GetOrderItembyID(id));
         }
+
+        public OrderItem_Model GetOrderItembyOrderID(int id)
+        {
+            return Mapper.EMOrdItmMapper(_repo.GetOrderItembyOrderID(id));
+        }
     }
 }
