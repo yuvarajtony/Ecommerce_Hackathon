@@ -42,7 +42,7 @@ select * from Orders
 select * from Order_Items
 
 delete from Orders
-where Order_ID = 7;
+where Order_ID = 10;
 
 -------------------------------------------------------------------------------------------------------------
 

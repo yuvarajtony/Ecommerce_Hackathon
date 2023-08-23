@@ -2,6 +2,16 @@ body {
     overflow-x: hidden;
 }
 
+h3 {
+    font-family: 'montserrat';
+    font-size: 30px;
+    font-weight: bold;
+    color: #222222;
+    margin-top: 6%;
+    margin-left: 5%;
+}
+
+
 /* navbar style */
 
 .nav-bar {
@@ -59,7 +69,7 @@ td{
 
 
 .table-box {
-    top: 15%;
+    top: 4%;
     width: 90%;
     box-sizing: border-box;
     position: relative;

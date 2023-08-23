@@ -18,7 +18,7 @@ span {
     color: #ffffff;
 }
 
-.add-customer {
+.btns {
     text-decoration: none;
     color: #ffffff;
     background-color: #000000;
@@ -31,7 +31,7 @@ span {
     margin-top: 0.2%;
 }
 
-.add-customer:hover {
+.btns:hover {
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     cursor: pointer;

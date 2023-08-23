@@ -47,14 +47,14 @@ export class HomePageComponent implements OnInit{
   viewOrdersdialog(id: string)
   {
     const customer_id = id;
-    this.homeservice.setData(customer_id);
+    localStorage.setItem('cus_id', id);
     this.router.navigate(['view-order']);
   }
 
   bookOrdersdialog(id: string) 
   {
     const customer_id = id;
-    this.homeservice.setData(customer_id);
+    localStorage.setItem('cus_id', id);
     this.router.navigate(['book-order']);
   }
 

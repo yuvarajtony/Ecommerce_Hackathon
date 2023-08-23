@@ -20,10 +20,12 @@ export class ViewOrderComponent implements OnInit{
   constructor (public router: Router,
     private ecomservice: EcommerceServiceService,
     private vieworddialog: MatDialog) {
-      this.received_data = ecomservice.getData();
   }
 
   ngOnInit(): void {
+
+    this.received_data = localStorage.getItem('cus_id');
+    
     this.ecomservice.getorderbyCustomer(this.received_data).subscribe(data => {
       // console.log(data);
 

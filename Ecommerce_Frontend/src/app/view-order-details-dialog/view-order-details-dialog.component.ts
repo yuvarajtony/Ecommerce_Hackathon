@@ -41,8 +41,10 @@ export class ViewOrderDetailsDialogComponent implements OnInit {
       console.log(data);
     })
 
-    this.dialogref.close();
+    this.router.navigateByUrl('', {skipLocationChange: false}).then(() => {
+      this.router.navigate(['view-order'])
+    })
 
-    this.router.navigate(['home']);
+    this.dialogref.close();
   }
 }

@@ -1,0 +1,14 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Product Name</mat-label>
+        <input name="product_name" matInput required [(ngModel)]="productname">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Price</mat-label>
+        <input name="price" matInput required ngModel [(ngModel)]="price">
+    </mat-form-field>
+    <div class="btns">
+        <button class="btn" type="submit" (click)="onSubmit()">Add</button>
+    </div>
+</form>

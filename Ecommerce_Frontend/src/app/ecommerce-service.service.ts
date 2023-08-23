@@ -42,16 +42,6 @@ export interface orderitem {
 })
 export class EcommerceServiceService {
 
-  private Customer_Email_ID: string;
-
-  setData(data: string) {
-    this.Customer_Email_ID = data;
-  }
-
-  getData() {
-    return this.Customer_Email_ID;
-  }
-
   customer_detail: customer_detail = {
     customerEmail: '',
     customerName: '',
@@ -134,6 +124,18 @@ export class EcommerceServiceService {
 
   getproductbyID(id: number): Observable<product> {
     return this.httpclient.get<product>(`https://localhost:7243/api/Product/GetProductbyID/${id}`);
+  }
+
+  addproduct(prod: any)
+  {
+    this.product.productId = prod.productId;
+    this.product.productName = prod.productName;
+    this.product.price = prod.price;
+
+    const headers = { 'content-type': 'application/json' };
+    const body = JSON.stringify(this.product);
+
+    return this.httpclient.post("https://localhost:7243/api/Product/AddProduct", body, { headers: headers });
   }
 
 

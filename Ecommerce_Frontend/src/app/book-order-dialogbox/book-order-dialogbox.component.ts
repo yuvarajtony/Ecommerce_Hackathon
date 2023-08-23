@@ -12,7 +12,7 @@ import { BookOrderComponent } from '../book-order/book-order.component';
 })
 export class BookOrderDialogboxComponent implements OnInit {
 
-  quantity: number;
+  quantity: number = 1;
 
   productid: number;
   customeremail: string;
@@ -72,6 +72,9 @@ export class BookOrderDialogboxComponent implements OnInit {
         console.log(res);
       })
     })
+
+    console.log("quantity: " + this.quantity);
+    
 
     await new Promise(resolve => setTimeout(resolve, 2500)); 
 
